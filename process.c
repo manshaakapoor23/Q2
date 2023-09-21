@@ -14,7 +14,7 @@ int main(){
     clock_gettime(CLOCK_MONOTONIC, &start1);
     pid1 = fork();
     if (pid1 == 0){
-        execl("./counting_program", "./counting_program", "SCHED_OTHER", NULL);
+        execl("./counting_program.c", "./counting_program", "SCHED_OTHER", NULL);
         perror("execl");
         exit(EXIT_FAILURE);
     }
